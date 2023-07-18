@@ -7,7 +7,7 @@ Welcome to the Polygon-Module-1 repository! This repository contains the code fo
 To get started with the project, please follow the steps below:
 
 1. Download the entire repository to your local machine.
-2. Navigate to the `POLYPROOF` project directory.
+2. By this https://github.com/RIDAMSINHA/DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK.git
 3. Run the command `npm install` to install all the necessary project dependencies.
 4. Once the dependencies are installed, run the test file using the command `npx hardhat test`.
 
@@ -44,10 +44,14 @@ To approve and deposit the minted NFTs from Ethereum to the Polygon Mumbai netwo
 npx hardhat run scripts/approveDeposit.js --network goerli
 ```
 
-## Author
+## Authors
 
-This project was created by Ridam Aditya Sinha.
+RIDAM ADITYA SINHA
+
+https://www.linkedin.com/in/ridam-sinha-188133210/
+
+ridamsinha20@gmail.com
 
 ## License
 
-This project is licensed under the MIT License. Feel free to make a copy of the project and use it for your own purposes.
+This project is licensed under the MIT License.
