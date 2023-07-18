@@ -1,28 +1,28 @@
 const nfts = [
   {
     name: "0",
-    description: "A cricketer wearing blue jersey cheering the crowd",
-    image: "QmdL362MF44qHLYVx4oUVvkSCpDNttSN3hTvPKUVm3aD8P",
+    description: "Many Beautiful Eyes",
+    image: "ipfs://bafybeid2klyuhdc2u7yhmie2jh6lw42unbumy62m5c4fxk7qcwax5s7dry/1.png",
   },
   {
     name: "1",
-    description: "A cricketer wearing blue jersey cheering the crowd",
-    image: "QmYHUptBFLJbDjRBJxs3nsPtqYa3CSUNh3w8BeUTEMjFoQ",
+    description: "Many Beautiful Eyes",
+    image: "ipfs://bafybeid2klyuhdc2u7yhmie2jh6lw42unbumy62m5c4fxk7qcwax5s7dry/2.png",
   }, //change
   {
     name: "2",
-    description: "A cricketer wearing blue jersey cheering the crowd",
-    image: "QmVYMcF5V8gKS8FeEC1xAe5rRpL6Q6kbjwGcGPpacUuNF5",
+    description: "Many Beautiful Eyes",
+    image: "ipfs://bafybeid2klyuhdc2u7yhmie2jh6lw42unbumy62m5c4fxk7qcwax5s7dry/3.png",
   },
   {
     name: "3",
-    description: "A cricketer wearing blue jersey cheering the crowd",
-    image: "QmbTd8m7HctVJr9A4FL83ejcMmyuAXbU4FkL3QERmZGiLM",
+    description: "Many Beautiful Eyes",
+    image: "ipfs://bafybeid2klyuhdc2u7yhmie2jh6lw42unbumy62m5c4fxk7qcwax5s7dry/4.png",
   },
   {
     name: "4",
-    description: "A cricketer wearing blue jersey cheering the crowd.",
-    image: "QmRiB3kwnLP8BAudp6BNh2tfjKdwX4Hpmeigdrz45L9xAj",
+    description: "Many Beautiful Eyes.",
+    image: "ipfs://bafybeid2klyuhdc2u7yhmie2jh6lw42unbumy62m5c4fxk7qcwax5s7dry/5.png",
   },
 ];
 

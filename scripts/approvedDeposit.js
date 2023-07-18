@@ -1,14 +1,14 @@
 //import c from "contracts/examples/erc721-transfer/FxERC721RootTunnel.sol"// Import necessary packages and contracts
 const { ethers } = require("hardhat");
 const { FXRootContractAbi } = require("../artifacts/FXRootContractAbi.js");
-const ABI = require("../artifacts/contracts/cricketer.sol/cricketer.json");
+const ABI = require("../artifacts/contracts/eyes.sol/eyes.json");
 require("dotenv").config();
 
 //Transfer ERC721A tokens to the Ethereum FxChain network
 async function main() {
   // Set up connections to network and wallet
   const networkAddress =
-    "https://eth-goerli.g.alchemy.com/v2/h-asDNMJ21mVniDAY3XE1VQ9F7PW7A0x";
+    "https://eth-goerli.g.alchemy.com/v2/31P81Y8oNJOnETlIglCJ73OKTKKrwZDb";
   const privateKey = process.env.PRIVATE_KEY;
   const provider = new ethers.providers.JsonRpcProvider(networkAddress);
 
@@ -19,11 +19,11 @@ async function main() {
   const [signer] = await ethers.getSigners();
 
   // Get ERC721A contract instance
-  const NFT = await ethers.getContractFactory("cricketer");
-  const nft = await NFT.attach("0x59057972F553f795275bE46bdC27De38EdBd9E1e");
+  const NFT = await ethers.getContractFactory("eyes");
+  const nft = await NFT.attach("0xFfC284eCF1e898e01b617be4C3D8cB1C5Ec57B92");
 
   // Get FXRoot contract instance
-  const fxRootAddress = "0xF9bc4a80464E48369303196645e876c8C7D972de";
+  const fxRootAddress = "0x5F8E1E8181fEBd9662d1E250602F1498B461cf5A";
   const fxRoot = await ethers.getContractAt(FXRootContractAbi, fxRootAddress);
 
   // TokenIds to transfer
@@ -40,7 +40,7 @@ async function main() {
   for (let i = 0; i < tokenIds; i++) {
     const depositTx = await fxRoot
       .connect(signer)
-      .deposit(nft.address, wallet.address, tokenIds[i], "0x6566");
+      .deposit(nft.address, wallet.address, tokenIds[i], "0x80001");
 
     // Wait for the deposit to be confirmed
     await depositTx.wait();
@@ -53,7 +53,7 @@ async function main() {
 
   // Print the balance of the wallet
   console.log(
-    "IndianNFT wallet balance",
+    "EYESNFT wallet balance",
     wallet.address,
     "is: ",
     balance.toString()

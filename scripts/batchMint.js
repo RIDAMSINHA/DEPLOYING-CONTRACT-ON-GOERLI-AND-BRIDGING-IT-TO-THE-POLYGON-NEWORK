@@ -1,4 +1,4 @@
-// This script batch mints criceket ERC721A tokens.
+// This script batch mints eyes ERC721A tokens.
 
 // Import required libraries
 const { ethers } = require("hardhat");
@@ -10,7 +10,7 @@ async function main() {
 
   // The URL of the network provider
   const networkAddress =
-    "https://eth-goerli.g.alchemy.com/v2/h-asDNMJ21mVniDAY3XE1VQ9F7PW7A0x";
+    "https://eth-goerli.g.alchemy.com/v2/31P81Y8oNJOnETlIglCJ73OKTKKrwZDb";
 
   // Create a provider using the URL
   const provider = new ethers.providers.JsonRpcProvider(networkAddress);
@@ -19,11 +19,11 @@ async function main() {
   const signer = new ethers.Wallet(privateKey, provider);
 
   // Tthe address of the deployed contract
-  const contractAddress = "0x032DB7b9DD6EB0cFFD06183515D77D5567E68037";
+  const contractAddress = "0xFfC284eCF1e898e01b617be4C3D8cB1C5Ec57B92";
 
   // Get the contract factory and attach it to the signer
-  const IndianNFT = await ethers.getContractFactory("cricketer", signer);
-  const contract = await IndianNFT.attach(contractAddress);
+  const EYESNFT = await ethers.getContractFactory("eyes", signer);
+  const contract = await EYESNFT.attach(contractAddress);
 
   // Call the mint function on the contract to mint 5 tokens
   await contract.mint(5);

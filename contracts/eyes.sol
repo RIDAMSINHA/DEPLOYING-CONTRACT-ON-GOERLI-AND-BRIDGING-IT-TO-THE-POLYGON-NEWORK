@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 
 import "erc721a/contracts/ERC721A.sol";
 
-contract cricketer is ERC721A {
+contract eyes is ERC721A {
     address public owner;
 
     // Maximum number of tokens that can be minted
@@ -12,12 +12,12 @@ contract cricketer is ERC721A {
 
     // Base url for the nfts
     string baseUrl =
-        "https://gateway.pinata.cloud/ipfs/QmcX3QoHU2kSJwEacBDqXpLJ3XhEGf3cawpffjarGwMqaQ/";
+        "https://gateway.pinata.cloud/ipfs/QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh/";
 
     // URL for the prompt description
-    string public prompt = "A cricketer wearing blue jersey cheering the crowd";
+    string public prompt = "Many Beautiful Eyes";
 
-    constructor() ERC721A("cricketer", "CRT") {
+    constructor() ERC721A("eyes", "EYE") {
         owner = msg.sender;
     }
 
