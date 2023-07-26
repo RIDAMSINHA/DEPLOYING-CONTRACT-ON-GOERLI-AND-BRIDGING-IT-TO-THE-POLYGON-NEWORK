@@ -9,7 +9,7 @@ To get started with the project, please follow the steps below:
 1. Download the entire repository to your local machine.
 2. By this https://github.com/RIDAMSINHA/DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK.git
 3. Run the command `npm install` to install all the necessary project dependencies.
-4. Once the dependencies are installed, run the test file using the command `npx hardhat test`.
+4. Once the dependencies are installed, run the test file using the command `npx hardhat compile`.
 
 ## Deploying the ERC721 Contract
 
@@ -37,12 +37,22 @@ This script will mint the specified number of NFTs and assign them to your addre
 
 To approve and deposit the minted NFTs from Ethereum to the Polygon Mumbai network using the FxPortal Bridge, follow these steps:
 
-1. Map the child contract to the FxPortal Bridge by providing the child contract address to the bridge.
+1. Map the FxPortal Bridge address to the file.
 2. Execute the following command:
 
 ```
 npx hardhat run scripts/approvedDeposit.js --network goerli
 ```
+
+## BalanceOf NFTs
+
+To check the balance of NFTs using the deployed ERC721 contract on the goerli/mumbai testnet, run the following command:
+
+```
+npx hardhat run scripts/balanceOf.js --network goerli/mumbai
+```
+
+This script will return the balance of the nfts of your contract in that specified network.
 
 ## Authors
 
