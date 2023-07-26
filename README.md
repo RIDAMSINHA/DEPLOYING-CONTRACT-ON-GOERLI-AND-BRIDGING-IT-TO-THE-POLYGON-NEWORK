@@ -41,7 +41,7 @@ To approve and deposit the minted NFTs from Ethereum to the Polygon Mumbai netwo
 2. Execute the following command:
 
 ```
-npx hardhat run scripts/approveDeposit.js --network goerli
+npx hardhat run scripts/approvedDeposit.js --network goerli
 ```
 
 ## Authors

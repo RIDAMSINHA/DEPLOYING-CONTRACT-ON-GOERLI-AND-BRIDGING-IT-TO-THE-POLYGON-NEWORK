@@ -1,48 +1,52 @@
 // SPDX-License-Identifier: MIT
+pragma solidity ^0.8.1;
 
-pragma solidity ^0.8.9;
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-import "erc721a/contracts/ERC721A.sol";
+contract eyes is ERC721Enumerable, Ownable {
+    struct NFTMetadata {
+        string name;
+        string description;
+        string image;
+    }
 
-contract eyes is ERC721A {
-    address public owner;
-
-    // Maximum number of tokens that can be minted
+    NFTMetadata[] public nfts;
     uint256 public maxQuantity = 5;
+    uint256 public currentTokenId = 0;
 
-    // Base url for the nfts
-    string baseUrl =
-        "https://gateway.pinata.cloud/ipfs/QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh/";
-
-    // URL for the prompt description
-    string public prompt = "Many Beautiful Eyes";
-
-    constructor() ERC721A("eyes", "EYE") {
-        owner = msg.sender;
+    constructor() ERC721("MyNFTCollection", "MNC") {
+        nfts.push(NFTMetadata('0', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
+        nfts.push(NFTMetadata('1', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
+        nfts.push(NFTMetadata('2', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
+        nfts.push(NFTMetadata('3', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
+        nfts.push(NFTMetadata('4', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
     }
 
-    // Modifier that only allows the owner to execute a function
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Only owner can perform this action!");
-        _;
+    function _baseURI() internal pure override returns (string memory) {
+        return "https://gateway.ipfs.io/ipfs/";
     }
 
-    // Function to mint NFT which only owner can perform
-    function mint(uint256 quantity) external payable onlyOwner {
-        require(
-            totalSupply() + quantity <= maxQuantity,
-            "You can not mint more than 5"
-        );
-        _mint(msg.sender, quantity);
+    // Returns the prompt used to generate the images for the given NFT tokenId
+    function promptDescription(uint256 tokenId) external view returns (string memory) {
+        require(tokenId < nfts.length, "TokenId does not exist");
+        return nfts[tokenId].description;
     }
 
-    // Override the baseURI function to return the base URL for the NFTs
-    function _baseURI() internal view override returns (string memory) {
-        return baseUrl;
+    function mintNFT(uint256 quantity) external onlyOwner {
+        require(currentTokenId + quantity <= maxQuantity, "Exceeds maximum token limit");
+        for (uint256 i = 0; i < quantity; i++) {
+            _mint(msg.sender, currentTokenId);
+            currentTokenId++;
+        }
     }
+}
 
-    // Return the URL for the prompt description
-    function promptDescription() external view returns (string memory) {
-        return prompt;
+contract FxPortalBridge {
+    event Deposit(address indexed from, address indexed to, uint256 tokenId, string data);
+
+    function deposit(string calldata data, address to, uint256 tokenId) external {
+
+        emit Deposit(msg.sender, to, tokenId, data);
     }
 }

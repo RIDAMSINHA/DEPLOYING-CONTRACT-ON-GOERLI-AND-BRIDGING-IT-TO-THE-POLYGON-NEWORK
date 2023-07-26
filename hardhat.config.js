@@ -11,11 +11,11 @@ module.exports = {
   solidity: "0.8.18",
   networks: {
     mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com",
+      url: "https://polygon-testnet.public.blastapi.io",
       accounts: [process.env.PRIVATE_KEY],
     },
     goerli: {
-      url: "https://eth-goerli.g.alchemy.com/v2/h-asDNMJ21mVniDAY3XE1VQ9F7PW7A0x",
+      url: "https://ethereum-goerli.publicnode.com",
       accounts: [process.env.PRIVATE_KEY],
     },
   },

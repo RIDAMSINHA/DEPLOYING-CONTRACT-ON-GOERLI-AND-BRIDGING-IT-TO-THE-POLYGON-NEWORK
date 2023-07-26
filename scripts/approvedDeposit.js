@@ -1,69 +1,38 @@
-//import c from "contracts/examples/erc721-transfer/FxERC721RootTunnel.sol"// Import necessary packages and contracts
 const { ethers } = require("hardhat");
-const { FXRootContractAbi } = require("../artifacts/FXRootContractAbi.js");
-const ABI = require("../artifacts/contracts/eyes.sol/eyes.json");
-require("dotenv").config();
+require('dotenv').config();
 
-//Transfer ERC721A tokens to the Ethereum FxChain network
 async function main() {
-  // Set up connections to network and wallet
-  const networkAddress =
-    "https://eth-goerli.g.alchemy.com/v2/31P81Y8oNJOnETlIglCJ73OKTKKrwZDb";
-  const privateKey = process.env.PRIVATE_KEY;
-  const provider = new ethers.providers.JsonRpcProvider(networkAddress);
+  try {
+    const networkAddress = 'https://polygon-testnet.public.blastapi.io'; // Mumbai network RPC URL
+    const privateKey = process.env.PRIVATE_KEY;
+    const provider = new ethers.providers.JsonRpcProvider(networkAddress);
 
-  // Create a wallet instance
-  const wallet = new ethers.Wallet(privateKey, provider);
+    const wallet = new ethers.Wallet(privateKey, provider);
 
-  // Get the signer instance
-  const [signer] = await ethers.getSigners();
+    const signer = wallet.connect(provider);
+    // Get the eyes contract instance
+    const nftAddress = '0x0403792Fe779299cF8230337e57dF7227e7ac6e1'; 
+    const NFT = await ethers.getContractFactory("eyes");
+    const nft = NFT.attach(nftAddress)
+    // Get the FxPortalBridge contract instance for Mumbai network
+    const fxPortalBridgeAddress = '0xF9bc4a80464E48369303196645e876c8C7D972de'; 
+    const FxPortalBridge = await ethers.getContractFactory("FxPortalBridge"); 
+    const fxPortalBridge = FxPortalBridge.attach(fxPortalBridgeAddress);
 
-  // Get ERC721A contract instance
-  const NFT = await ethers.getContractFactory("eyes");
-  const nft = await NFT.attach("0xFfC284eCF1e898e01b617be4C3D8cB1C5Ec57B92");
+    // Token IDs to transfer
+    const tokenIds = [0, 1, 2, 3, 4];
 
-  // Get FXRoot contract instance
-  const fxRootAddress = "0x5F8E1E8181fEBd9662d1E250602F1498B461cf5A";
-  const fxRoot = await ethers.getContractAt(FXRootContractAbi, fxRootAddress);
-
-  // TokenIds to transfer
-  const tokenIds = [0, 1, 2, 3, 4];
-
-  // Approve the nfts for transfer
-  const approveTx = await nft
-    .connect(signer)
-    .setApprovalForAll(fxRootAddress, true);
-  await approveTx.wait();
-  console.log("Approval confirmed");
-
-  // Deposit the nfts to the FXRoot contracts
-  for (let i = 0; i < tokenIds; i++) {
-    const depositTx = await fxRoot
-      .connect(signer)
-      .deposit(nft.address, wallet.address, tokenIds[i], "0x80001");
-
-    // Wait for the deposit to be confirmed
+    for (let i = 0; i < tokenIds.length; i++) {
+      await nft.connect(signer).approve(fxPortalBridgeAddress, tokenIds[i]);
+    }
+    console.log(`NFTs approved for transfer.`);
+    const data = "Additional data related to the deposit"; 
+    const depositTx = await fxPortalBridge.connect(signer).deposit(data, nft.address, tokenIds, { gasPrice: ethers.utils.parseUnits("100", "gwei") });
     await depositTx.wait();
-  }
 
-  console.log("Approved and deposited");
-
-  // Test balanceOf
-  const balance = await nft.balanceOf(wallet.address);
-
-  // Print the balance of the wallet
-  console.log(
-    "EYESNFT wallet balance",
-    wallet.address,
-    "is: ",
-    balance.toString()
-  );
-}
-
-// Call the main function and handle any errors
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
+    console.log("NFTs deposited to the mumbai network for transfer.");
+  } catch (error) {
     console.error(error);
-    process.exit(1);
-  });
+  }
+}
+main();
