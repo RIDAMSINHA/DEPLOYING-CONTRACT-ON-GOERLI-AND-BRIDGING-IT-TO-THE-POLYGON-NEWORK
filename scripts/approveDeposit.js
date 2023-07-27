@@ -2,7 +2,7 @@ const hre = require("hardhat");
 const fxRootContractABI = require("../fxRootContractABI.json");
 const tokenContractJSON = require("../artifacts/contracts/eyes.sol/eyes.json");
 
-const tokenAddress = "0x6c13b8EeBb863b78e0128224536473BB40089f4E"; // place your erc721 contract address here
+const tokenAddress = "0x5424De28DA3c033a69EF8B2E17c371e0B17052bE"; // place your erc721 contract address here
 const tokenABI = tokenContractJSON.abi;
 const fxERC721RootAddress = "0xF9bc4a80464E48369303196645e876c8C7D972de";
 const walletAddress = "0xE6c82A490314A404E4b2976cc26dA0Aa2F089902"; // place your public address for your wallet here
