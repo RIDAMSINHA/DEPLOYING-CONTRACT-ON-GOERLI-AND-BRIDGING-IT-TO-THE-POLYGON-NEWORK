@@ -41,7 +41,7 @@ To approve and deposit the minted NFTs from Ethereum to the Polygon Mumbai netwo
 2. Execute the following command:
 
 ```
-npx hardhat run scripts/approvedDeposit.js --network goerli
+npx hardhat run scripts/approveDeposit.js --network goerli
 ```
 
 ## BalanceOf NFTs
@@ -49,7 +49,7 @@ npx hardhat run scripts/approvedDeposit.js --network goerli
 To check the balance of NFTs using the deployed ERC721 contract on the mumbai testnet, run the following command:
 
 ```
-npx hardhat run scripts/balanceOf.js --network mumbai
+npx hardhat run scripts/getBalance.js --network mumbai
 ```
 
 This script will return the balance of the nfts of your contract in that specified network.

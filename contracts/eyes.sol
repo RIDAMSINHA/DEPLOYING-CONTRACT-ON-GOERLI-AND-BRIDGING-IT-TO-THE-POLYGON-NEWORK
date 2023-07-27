@@ -4,7 +4,7 @@ pragma solidity ^0.8.1;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MetaToken is ERC721Enumerable, Ownable {
+contract eyes is ERC721Enumerable, Ownable {
     struct NFTMetadata {
         string name;
         string description;
@@ -15,7 +15,7 @@ contract MetaToken is ERC721Enumerable, Ownable {
     uint256 public maxQuantity = 5;
     uint256 public currentTokenId = 0;
 
-    constructor() ERC721("MyNFTCollection", "MNC") {
+    constructor() ERC721("EyesNFT", "Eyes") {
         nfts.push(NFTMetadata('0', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
         nfts.push(NFTMetadata('1', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
         nfts.push(NFTMetadata('2', 'Many Beautiful Eyes', 'QmbyZK9kVchUGSKp8jGM6rFZBX1E1upWtuGQR4o2Cg99zh'));
