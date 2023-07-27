@@ -1,10 +1,10 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\contracts\\eyes.sol": {
-      "lastModificationDate": 1690404497024,
-      "contentHash": "69ff61f68255df6a1b92365a377d20d6",
-      "sourceName": "contracts/eyes.sol",
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\contracts\\MetaToken.sol": {
+      "lastModificationDate": 1690452828515,
+      "contentHash": "0f480e53e3aefd363110f08322eb76d8",
+      "sourceName": "contracts/MetaToken.sol",
       "solcConfig": {
         "version": "0.8.18",
         "settings": {
@@ -37,11 +37,11 @@
       ],
       "artifacts": [
         "FxPortalBridge",
-        "eyes"
+        "MetaToken"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\ERC721Enumerable.sol": {
-      "lastModificationDate": 1690403775138,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\ERC721Enumerable.sol": {
+      "lastModificationDate": 1690452367245,
       "contentHash": "212e86880d210b6cac8c3eb0cd6b1fad",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
       "solcConfig": {
@@ -78,8 +78,8 @@
         "ERC721Enumerable"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
-      "lastModificationDate": 1690403775379,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\access\\Ownable.sol": {
+      "lastModificationDate": 1690452367520,
       "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -115,8 +115,8 @@
         "Ownable"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
-      "lastModificationDate": 1690403775138,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1690452367237,
       "contentHash": "95602b04f0b53f1139f4668d123ddeb7",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -158,8 +158,8 @@
         "ERC721"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Enumerable.sol": {
-      "lastModificationDate": 1690403775321,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Enumerable.sol": {
+      "lastModificationDate": 1690452367431,
       "contentHash": "f4dd06783f321aa26179bc2b6e361c29",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
       "solcConfig": {
@@ -195,8 +195,8 @@
         "IERC721Enumerable"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
-      "lastModificationDate": 1690403775044,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1690452367031,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -230,43 +230,8 @@
         "Context"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1690403775026,
-      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
-      "solcConfig": {
-        "version": "0.8.18",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
-      ]
-    },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
-      "lastModificationDate": 1690403775406,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1690452367567,
       "contentHash": "48686fc32a22a3754b8e63321857dd2a",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -303,8 +268,43 @@
         "Strings"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
-      "lastModificationDate": 1690403775090,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1690452366984,
+      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1690452367167,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -340,80 +340,8 @@
         "ERC165"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
-      "lastModificationDate": 1690403775316,
-      "contentHash": "48de4c9a3a4ae5ef66a2aa620843413f",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
-      "solcConfig": {
-        "version": "0.8.18",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../../utils/introspection/IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC721"
-      ]
-    },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
-      "lastModificationDate": 1690403775327,
-      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
-      "solcConfig": {
-        "version": "0.8.18",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC721Receiver"
-      ]
-    },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
-      "lastModificationDate": 1690403775327,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
+      "lastModificationDate": 1690452367439,
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
@@ -449,8 +377,80 @@
         "IERC721Metadata"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
-      "lastModificationDate": 1690403775374,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1690452367447,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1690452367423,
+      "contentHash": "48de4c9a3a4ae5ef66a2aa620843413f",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
+      "lastModificationDate": 1690452367499,
       "contentHash": "fe63409d8a06818b926cf89e0ea88b1b",
       "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
       "solcConfig": {
@@ -484,8 +484,8 @@
         "Math"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
-      "lastModificationDate": 1690403775390,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
+      "lastModificationDate": 1690452367552,
       "contentHash": "9488ebd4daacfee8ad04811600d7d061",
       "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
       "solcConfig": {
@@ -519,8 +519,8 @@
         "SignedMath"
       ]
     },
-    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\New folder\\DEPLOYING-CONTRACT-ON-GOERLI-AND-BRIDGING-IT-TO-THE-POLYGON-NEWORK\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
-      "lastModificationDate": 1690403775261,
+    "C:\\Users\\dell\\OneDrive\\Desktop\\.vscode\\.vscode\\EXAMPLE\\fxPortalStarter\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1690452367367,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {

@@ -46,10 +46,11 @@ npx hardhat run scripts/approvedDeposit.js --network goerli
 
 ## BalanceOf NFTs
 
-To check the balance of NFTs using the deployed ERC721 contract on the goerli/mumbai testnet, run the following command:
+To check the balance of NFTs using the deployed ERC721 contract on the mumbai testnet, run the following command:
 
 ```
-npx hardhat run scripts/balanceOf.js --network goerli/mumbai
+npx hardhat run scripts/balanceOf.js --network
+mumbai
 ```
 
 This script will return the balance of the nfts of your contract in that specified network.
